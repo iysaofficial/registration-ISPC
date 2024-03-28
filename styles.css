@@ -1,6 +1,8 @@
 :root{
   --warna-primary: #003d7e;
   --warna-sekunder: #00bfff;
+  --warna-tulisan: #fff;
+  --warna-tulisan2 : #000;
 }
 
 body {
@@ -18,29 +20,28 @@ body {
 }
 
 .wrapper h1 {
-  font-size: 80px;
-  margin-top: 1px;
+  font-size: clamp(30px, 8vw, 80px);
+  padding: .5rem;
   text-align: center;
   justify-content: center;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--warna-tulisan);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
 .wrapper h2 {
-  font-size: 30px;
-  color: #ffffff;
+  font-size: clamp(20px, 4vw, 30px);
+  color: var(--warna-tulisan);
   margin-top: 15vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--warna-tulisan);
   width: 400px;
   font-weight: bold;
   border-radius: 10px;
   padding: 5px;
-  /* background: linear-gradient(to right, #008000 50%, #C0C0C0 110%); */
-  background: #00bfff ;
+  background: var(--warna-primary);
 }
 
 .wrapper h3 {
@@ -49,18 +50,12 @@ body {
   text-align: center;
   justify-content: center;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--warna-tulisan);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
 /* button */
-
-/* *{
-        margin: auto;
-        padding: 0;
-        box-sizing: border-box;
-    } */
 
 a {
   border: none;
@@ -78,7 +73,7 @@ a {
   padding: 10px 100px;
   border-radius: 550000px;
   cursor: pointer;
-  /* color: #ffffff; */
+  border: var(--warna-tulisan2) 1px solid;
   transition: all 0.4s;
   font-size: 20px;
   font-weight: bold;
@@ -87,28 +82,32 @@ a {
 }
 
 .btn--primary {
-  background-color: #ffffff;
+  background-color: var(--warna-primary);
+  color: var(--warna-tulisan);
+  border: solid .2rem var(--warna-tulisan);
 }
 
 .btn--primary:hover {
-  color: #ffffff;
-  background: var(--warna-sekunder);
+  color: var(--warna-tulisan2);
+  background: var(--warna-tulisan);
   box-shadow: 0 4px 15px 0 rgba(245,245,245);
+  border: var(--warna-tulisan) 1px solid;
 }
 
 .btn--accent {
-  background-color: #ffffff;
+  background-color: var(--warna-tulisan);
 }
 
 .btn--accent:hover {
-  color: #ffffff;
-  background: var(--warna-sekunder);
+  color: var(--warna-tulisan);
+  background: var(--warna-primary);
   box-shadow: 0 4px 15px 0 rgba(245,245,245);
+  border: #000 1px solid;
 }
 
 @media screen and (max-width: 426px) {
   .link-web .btn {
-    width: 95%;
+    width: 75%;
     margin-top: 2px !important;
     margin-bottom: 10px;
   }
@@ -119,7 +118,7 @@ a {
     margin-bottom: 50px !important;
     justify-content: center;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--warna-tulisan);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
   }
@@ -129,35 +128,30 @@ a {
   }
 
   .wrapper h1 {
-    font-size: 25px !important;
-    margin-top: 1px !important;
     text-align: center;
-    margin-bottom: 70px;
     margin-top: 30px !important;
     justify-content: center;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--warna-tulisan);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
   }
   .wrapper h2 {
-    font-size: 25px;
-    color: #ffffff;
+    color: var(--warna-tulisan);
     margin-top: 90px !important;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
-    border: 1px solid #ffffff;
-    width: 320px;
+    border: 1px solid var(--warna-tulisan);
     font-weight: bold;
     border-radius: 25px;
     padding: 5px;
     background: var(--warna-primary);
+    width: 75%;
   }
   .btn {
     padding: 10px 10px;
     border-radius: 550000px;
     cursor: pointer;
-    /* color: #ffffff; */
     transition: all 0.4s;
     font-size: 20px;
     font-weight: bold;
